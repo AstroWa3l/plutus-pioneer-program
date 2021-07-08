@@ -12,9 +12,16 @@
   - Running an example auction contract on a local Playground.
   - Homework.
 
+- [Lecture #2](https://youtu.be/sN3BIa3GAOc)
+
+  - Triggering change.
+  - Low-level, untyped on-chain validation scripts.
+  - High-level, typed on-chain validation scripts.
+
 ## Code Examples
 
 - Lecture #1:  [English Auction](code/week01)
+- Lecture #2:  [Simple validation](code/week02)
 
 ## Exercises
 
@@ -32,6 +39,11 @@
   - Compile.
   - Simulate various auction scenarios.
 
+- Week #2
+
+  - Fix and complete the code in the [Homework1](code/week02/src/Week02/Homework1.hs) module.
+  - Fix and complete the code in the [Homework2](code/week02/src/Week02/Homework2.hs) module.
+
 ## Some Plutus Modules
 
 - [`Language.Marlowe.Semantics`](https://github.com/input-output-hk/plutus/blob/master/marlowe/src/Language/Marlowe/Semantics.hs), contains Marlowe types and semantics.
@@ -46,7 +58,7 @@
 - [`Plutus.V1.Ledger.Interval`](https://github.com/input-output-hk/plutus/blob/master/plutus-ledger-api/src/Plutus/V1/Ledger/Interval.hs), contains the definition of and helper functions for the `Interval` type.
 - [`Plutus.V1.Ledger.Slot`](https://github.com/input-output-hk/plutus/blob/master/plutus-ledger-api/src/Plutus/V1/Ledger/Slot.hs), contains the definition of the `Slot` type.
 - [`Plutus.V1.Ledger.Value`](https://github.com/input-output-hk/plutus/blob/master/plutus-ledger-api/src/Plutus/V1/Ledger/Value.hs), contains the definition of and helper functions for the `Value` type.
-- [`PlutusTx.Data`](https://github.com/input-output-hk/plutus/blob/master/plutus-tx/src/PlutusTx/Data.hs), contains the definition of the `Data` type.
+- [`PlutusTx.Builtins.Data`](https://github.com/input-output-hk/plutus/blob/master/plutus-core/plutus-core/src/PlutusCore/Data.hs), contains the definition of the `Data` type.
 - [`PlutusTx.IsData.Class`](https://github.com/input-output-hk/plutus/blob/master/plutus-tx/src/PlutusTx/IsData/Class.hs), defines the `IsData` class.
 
 ## Additional Resources
