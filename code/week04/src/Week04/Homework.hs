@@ -35,17 +35,17 @@ payContract = do
 -- recipient, but with amounts given by the two arguments. There should be a delay of one slot
 -- after each endpoint call.
 payTrace :: Integer -> Integer -> EmulatorTrace ()
-payTrace s r = do
+payTrace x y = do
     h <- activateContractWallet (Wallet 1) payContract
     void $ Emulator.waitNSlots 1
-    callEndpoint @pay h $ PayParams {
+    callEndpoint @"pay" h $ PayParams {
         ppRecipient = pubKeyHash $ walletPubKey $ Wallet 2
-        , ppLovelace = s
+        , ppLovelace = x
     }
     void $ Emulator.waitNSlots 1
-    callEndpoint @pay h $ PayParams {
+    callEndpoint @"pay" h $ PayParams {
         ppRecipient = pubKeyHash $ walletPubKey $ Wallet 2
-        , ppLovelace = r
+        , ppLovelace = y
     }
     void $ Emulator.waitNSlots 1
 
